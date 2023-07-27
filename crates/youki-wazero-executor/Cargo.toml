@@ -1,0 +1,19 @@
+[package]
+name = "youki-wazero-executor"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+containerd-shim = { workspace = true }
+containerd-shim-wasm = { workspace = true }
+libcontainer = { workspace = true }
+tracing = { workspace = true }
+oci-spec = { workspace = true }
+log = { workspace = true }
+libloading = "0.8.0"
+memfd = "0.6.3"
+
+[build-dependencies]
+gobuild = "0.1.0-alpha.1"
