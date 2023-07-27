@@ -11,6 +11,7 @@ members = [
     "crates/youki-wasmer-executor",
     "crates/youki-wasmtime-executor",
     "crates/youki-wazero-executor",
+    "crates/youki-wasm3-executor",
 ]
 
 [dependencies]
@@ -30,6 +31,7 @@ youki-wasmedge-executor = {version = "0.1.0", path = "crates/youki-wasmedge-exec
 youki-wasmer-executor = {version = "0.1.0", path = "crates/youki-wasmer-executor"}
 youki-wasmtime-executor = {version = "0.1.0", path = "crates/youki-wasmtime-executor"}
 youki-wazero-executor = {version = "0.1.0", path = "crates/youki-wazero-executor"}
+youki-wasm3-executor = {version = "0.1.0", path = "crates/youki-wasm3-executor"}
 
 [workspace.dependencies]
 containerd-shim = {git = "https://github.com/containerd/rust-extensions", rev = "8500b4c665e0d0911b9546c00bd0bd4670cf5533" }
