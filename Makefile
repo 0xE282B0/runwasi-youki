@@ -37,3 +37,4 @@ run-wasm: install load-app
 	sudo ctr run --rm --runtime=io.containerd.youki.v1 --annotation youki.wasm.handler=WasmTime docker.io/library/wasi-hello-world:latest wasmtime-hello /wasi-hello-world.wasm
 	sudo ctr run --rm --runtime=io.containerd.youki.v1 --annotation youki.wasm.handler=Wazero docker.io/library/wasi-hello-world:latest wazero-hello /wasi-hello-world.wasm
 	sudo ctr run --rm --runtime=io.containerd.youki.v1 --annotation youki.wasm.handler=Wasm3 docker.io/library/wasi-hello-world:latest wasm3-hello /wasi-hello-world.wasm
+	sudo ctr run --rm --runtime=io.containerd.youki.v1 --annotation youki.wasm.handler=WARM docker.io/library/wasi-hello-world:latest wamr-hello /wasi-hello-world.wasm
