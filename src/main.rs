@@ -8,6 +8,7 @@ use youki_wasmer_executor;
 use youki_wasmtime_executor;
 use youki_wazero_executor;
 use youki_wasm3_executor;
+use youki_wamr_executor;
 use std::fs::OpenOptions;
 use std::os::fd::{IntoRawFd, RawFd};
 use std::thread;
@@ -258,6 +259,11 @@ impl MyContainer {
                     Err(err) => return Err(err),
                 }
                 match youki_wasm3_executor::get_executor()(spec) {
+                    Ok(_) => return Ok(()),
+                    Err(ExecutorError::CantHandle(_)) => (),
+                    Err(err) => return Err(err),
+                }
+                match youki_wamr_executor::get_executor()(spec) {
                     Ok(_) => return Ok(()),
                     Err(ExecutorError::CantHandle(_)) => (),
                     Err(err) => return Err(err),
